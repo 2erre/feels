@@ -7,9 +7,13 @@ function copyText(text) {
     document.body.removeChild(elem);
 }
 
-function redirect() {
-    var inst = document.getElementById("instagram");
-    
-    window.open("https://instagram.com/feelsclo", "_blank");
-}
+function redirect(id) {
+    var elementId = document.getElementById(id).id;
+    //console.log(elementId);
 
+    if(elementId === "instagram") {
+        window.open("https://instagram.com/feelsclo", "_blank");
+    } else if (elementId === "shirt") {
+        window.open("seeProducts.html", "_blank");
+    }
+}

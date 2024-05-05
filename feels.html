@@ -12,7 +12,6 @@
   <body class="body">
     <div class="header">
       <img class="logo" src="immaginiFeels/logoFeels.png" />
-      <!--<p style="color:#FEFBEC; position: absolute;">JUVEI!</p>-->
       <p id="currentWidth" style="color: black; position: absolute"></p>
     </div>
 
@@ -22,47 +21,47 @@
         <a href="#CONTACTUS" class="nav-content"><span>CONTACT US</span></a>
     </div>-->
 
-    <div class="products-container wrap">
+    <div class="products-container">
       <!--<a name="PRODUCTS"></a>-->
       <!--<h4 style="text-align: center; font-size: 17px;">OUR PRODUCTS</h4>-->
 
-      <div class="product-card" href="">
-        <img src="immaginiFeels/white-tshirt.png" alt="" />
+      <div class="product-card" id="shirt" onclick="redirect(id)" href="">
+        <img src="mediaFeels/white-tshirt.png" alt="" />
         <h5 style="text-align: center">
           White t-shirt
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" href="">
-        <img src="immaginiFeels/black-tshirt.png" alt="" />
+      <div class="product-card" id="shirt" onclick="redirect(id)"  href="">
+        <img src="mediaFeels/black-tshirt.png" alt="" />
         <h5 style="text-align: center">
           Black t-shirt
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" href="">
-        <img src="immaginiFeels/blue-tshirt.jpg" alt="" />
+      <div class="product-card" id="shirt" onclick="redirect(id)"  href="">
+        <img src="mediaFeels/blue-tshirt.jpg" alt="" />
         <h5 style="text-align: center">
           Blue t-shirt
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" href="">
-        <img src="immaginiFeels/red-tshirt.png" alt="" />
+      <div class="product-card" id="shirt" onclick="redirect(id)"  href="">
+        <img src="mediaFeels/red-tshirt.png" alt="" />
         <h5 style="text-align: center">
           Red t-shirt
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" href="">
-        <img src="immaginiFeels/yellow-tshirt.png" alt="" />
+      <div class="product-card" id="shirt" onclick="redirect(id)"  href="">
+        <img src="mediaFeels/yellow-tshirt.png" alt="" />
         <h5 style="text-align: center">
           Yellow t-shirts
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" href="">
-        <img src="immaginiFeels/green-tshirt.png" alt="" />
+      <div class="product-card" id="shirt" onclick="redirect(id)"  href="">
+        <img src="mediaFeels/green-tshirt.png" alt="" />
         <h5 style="text-align: center">
           Green t-shirts
           <p style="text-align: center" class="price">39.99€</p>
@@ -77,6 +76,9 @@
         <p>
           "A wave of emotions that sometimes cannot be adequately explained."
         </p>
+        <div class="video-container">
+          <video class="video" src="immaginiFeels/summer-feels-different-video.mp4" autoplay muted loop></video>
+        </div>
       </div>
     </div>
 
@@ -92,7 +94,7 @@
       >
         Our e-mail: ouremail@gmail.com
       </p>
-      <p id="instagram" onclick="redirect()" title="to our profile">
+      <p id="instagram" onclick="redirect(id)" title="to our profile">
         Our Instagram: @feelsclo
       </p>
     </div>
