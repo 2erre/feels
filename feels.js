@@ -17,3 +17,28 @@ function redirect(id) {
         window.open("seeProducts.html", "_blank");
     }
 }
+
+//video
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  
+  // Function to start playing the video when it's in the viewport
+  function startVideoIfInView() {
+    var video = document.getElementById('myVideo');
+    if (isInViewport(video)) {
+      video.play();
+      // Remove the event listener after the video starts playing
+      window.removeEventListener('scroll', startVideoIfInView);
+    }
+  }
+  
+  // Add event listener to start the video when it's in the viewport
+  window.addEventListener('scroll', startVideoIfInView);
