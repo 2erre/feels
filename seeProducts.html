@@ -5,10 +5,45 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>See products</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='seeProducts.css'>
+    <script src='seeProducts.js'></script>
+    <link rel="icon" type="image/x-icon" href="mediaFeels/feelsLogoColored.jpg">
 </head>
-<body>
-    
+<body class="body">
+    <a class="header" href="feels.html">
+        <img class="logo" src="mediaFeels/logoFeels.png" />
+        <p id="currentWidth" style="color: black; position: absolute"></p>
+    </a>
+
+    <div class="product-container">
+        <div class="images-view">
+            <div class="images">
+                <img id="change" onclick="selectView(id)" src="mediaFeels/shirt-front.png">
+                <img id="front" onclick="selectView(id)" src="mediaFeels/shirt-front.png">
+            </div>
+        </div>
+        <div class="product">
+            <img src="mediaFeels/shirt-front.png">
+        </div>
+        <div class="about">
+            <h3>Product name</h3>
+            <label for="size">Choose size</label>
+            <select name="sizes" id="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>       
+            <p id="price">Price</p><button id="cart-button">Add to cart</button>
+            <p id="info">Delivery info</p>
+        </div>        
+    </div>
+
+    <div class="other-products">
+        <!--
+            mostra altri prodotti correlati
+        -->
+    </div>
 </body>
 </html>

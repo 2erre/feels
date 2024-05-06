@@ -7,6 +7,7 @@ function copyText(text) {
     document.body.removeChild(elem);
 }
 
+//prodotti
 function redirect(id) {
     var elementId = document.getElementById(id).id;
     //console.log(elementId);
@@ -16,6 +17,13 @@ function redirect(id) {
     } else if (elementId === "shirt") {
         window.open("seeProducts.html", "_blank");
     }
+}
+
+function handleMouseDown(event) {
+  if (event.button === 1) { // Verifica se è stato cliccato un prodotto con il pulsante centrale del mouse
+    event.preventDefault(); // Evita che si verifichi il comportamento predefinito del clic del pulsante centrale
+    redirect(event.currentTarget.id); // Chiama la funzione redirect con l'ID del div
+  }
 }
 
 //video
