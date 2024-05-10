@@ -28,3 +28,18 @@ function changeView(id) {
         productImage.src = "mediaFeels/shirt-front.png";
     }
 }
+
+function showOptions() {
+    var dropDownContent = document.getElementsByClassName("dropdown-content")[0];
+    var displayStyle = window.getComputedStyle(dropDownContent).display;
+    
+    if (displayStyle === "none") {
+        dropDownContent.style.display = "block";
+    } else {
+        dropDownContent.style.display = "none";
+    }
+}
+
+function chooseSize(size) {
+    document.getElementById('chosen-size').textContent = "Chosen size: " + size;
+}

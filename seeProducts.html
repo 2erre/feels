@@ -26,16 +26,21 @@
             <img src="mediaFeels/shirt-front.png">
         </div>
         <div class="about">
-            <h3>Product name</h3>
-            <label for="size">Choose size</label>
-            <select name="sizes" id="size">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
-            </select>       
-            <p id="price">Price</p><button id="cart-button">Add to cart</button>
+            <h3>White t-shirt</h3><p id="price">39.99€</p>
+
+            <div class="drop-down" onclick="showOptions()">
+                <button class="drop-btn"><span id="chosen-size">Choose size</span> <span class="arrow"><img src="mediaFeels/arrow-down.svg" alt=""></span></button>
+                <div class="dropdown-content">
+                  <a href="#" onclick="chooseSize('S')">S</a>
+                  <a href="#" onclick="chooseSize('M')">M</a>
+                  <a href="#" onclick="chooseSize('L')">L</a>
+                  <a href="#" onclick="chooseSize('XL')">XL</a>
+                  <a href="#" onclick="chooseSize('XXL')">XXL</a>
+                </div>
+            </div>
+
+            <button id="cart-button">Add to cart</button>
+            
             <p id="info">Delivery info</p>
         </div>        
     </div>

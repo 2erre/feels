@@ -14,8 +14,15 @@ Da fare:
 Progresso:
  - Costruita una prima versione della pagina per il dettaglio dei prodotti con quella sorta di "slide show" per la maglietta/prodotto
  - Sistemato lo script della landing page così da far partire la funzione redirect(id) anche se si schiaccia il prodotto con la rotella del mouse
-Idee:
- - ...
 Da fare:
+ - Non è chiaro cosa succede quando si schiaccia su "Our-email" (deve essere specificato che viene copiata negli appunti dell'utente l'email)
  - Nella pagine per il dettaglio dei prodotti fare in basso uno slider dove vengono proposti altri prodotti
- - Sistemare lo stile delle informazioni del prodotto
+ - Sistemare lo stile delle informazioni del prodotto (FATTO)
+
+10/05/2024
+Progresso:
+ - Sistemato lo stile delle informazioni del prodotto e creato il dropdown per la selezione della taglia (da sistemare la freccina che si muove)
+ - Creato il JS che sta dietro al dropdown ed al cambio del testo nel bottone una volta selezionata la taglia
+Da fare:
+ - Non è chiaro cosa succede quando si schiaccia su "Our-email" (deve essere specificato che viene copiata negli appunti dell'utente l'email)
+ - Nella pagine per il dettaglio dei prodotti fare in basso uno slider dove vengono proposti altri prodotti
