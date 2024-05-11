@@ -22,32 +22,6 @@ a {
   margin: 0 auto;
   width: 7%;
 }
-/* 
-.nav-container {
-  background-color: #fefbec;
-  margin-top: 2%;
-  margin: 0 auto;
-  height: 10%;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.nav-content {
-  margin: 0 auto;
-  background-color: #fefbec;
-  color: black;
-  text-decoration: none;
-  text-align: center;
-  margin-right: 8px;
-  margin-right: 8px;
-  font-size: 20px;
-}
-
-.nav-content:hover {
-  cursor: pointer;
-  color: #a8a69b;
-} */
 
 /*
 ||||  ||||   |||  ||||  || ||  |||| ||||||
@@ -124,7 +98,7 @@ a {
 }
 
 .video {
-  width: 480px;
+  width: 400px;
   height: auto;
 }
 

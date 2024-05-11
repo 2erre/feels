@@ -26,3 +26,7 @@ Progresso:
 Da fare:
  - Non è chiaro cosa succede quando si schiaccia su "Our-email" (deve essere specificato che viene copiata negli appunti dell'utente l'email)
  - Nella pagine per il dettaglio dei prodotti fare in basso uno slider dove vengono proposti altri prodotti
+
+11/05/2024
+Progresso:
+ - Cambiato il video da "summer feels different" a "feels logo animated"
