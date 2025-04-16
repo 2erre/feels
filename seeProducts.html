@@ -10,10 +10,16 @@
     <link rel="icon" type="image/x-icon" href="mediaFeels/feelsLogoColored.jpg">
 </head>
 <body class="body">
-    <a class="header" href="index.html">
-        <img class="logo" src="mediaFeels/logoFeels.png" />
-        <p id="currentWidth" style="color: black; position: absolute"></p>
-    </a>
+    <div class="header">
+        <a href="index.html">
+          <img class="logo" src="mediaFeels/logoFeels.png" />
+        </a>
+        <!-- <p id="currentWidth" style="color: black; position: absolute"></p>  -->
+  
+        <a class="cart-link" href="mycart.html" title="Go to cart">
+          <img src="mediaFeels/cart-icon.png" alt="cart" />
+        </a>
+    </div>
 
     <div class="product-container">
         <div class="images-view">
@@ -50,5 +56,14 @@
             mostra altri prodotti correlati
         -->
     </div>
+
+    <footer class="contactus-container">
+        <p id="email" text="ouremail@gmail.com" title="copy e-mail" onclick="copyText('ouremail@gmail.com')">
+        Our e-mail: ouremail@gmail.com
+        </p>
+        <p id="instagram" onclick="redirect(id)" title="to our profile">
+          Our Instagram: @feelsclo
+        </p>
+    </footer>
 </body>
 </html>

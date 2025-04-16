@@ -1,0 +1,379 @@
+@font-face {
+    font-family: "Migra";
+    src: url(fontSito/Migra-Extralight.ttf) format("truetype");
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  .body {
+    background-color: #fefbec;
+    font-family: "Migra", sans-serif;
+    font-weight: 1000;
+  }
+  
+  .header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    display: block; 
+    margin: 0 auto;
+    width: 25%;
+  }
+  
+  .cart-link {
+    position: absolute;
+    right: 22%;
+    top: 50%;
+    transform: translateY(-80%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cart-link img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cart-container {
+    max-width: 1200px;
+    margin: 100px auto;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fefbec;
+    font-family: "Migra", sans-serif;
+    font-weight: 1000;
+  }
+
+  .cart-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+/*
+|||||| |||||| ||||||  ||\ /||
+  ||     ||   ||      ||\|/||
+  ||     ||   ||||    ||   ||
+  ||     ||   ||      ||   ||
+||||||   ||   ||||||  ||   ||
+*/
+
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+  }
+
+  .item-details {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .item-details img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .item-name {
+    font-size: 18px;
+  }
+
+  .size-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+  
+  .size-button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.366);
+    cursor: pointer;
+  }
+  
+  .size-button:hover {
+    background-color: #f3efdd;
+  }
+  
+  .size-options {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #fefbec;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.366);
+    margin-top: 5px;
+  }
+  
+  .size-options div {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Migra", sans-serif;
+  }
+  
+  .size-options div:hover {
+    background-color: #f3efdd;
+  }
+
+  .size-button img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .item-price {
+    font-size: 16px;
+  }
+
+/*
+ /|||\  ||   || ||\ /|| ||\ /||  //||\\ ||||\\  \\   //
+ ||     ||   || ||\|/|| ||\|/|| ||   || ||   ||  \\ //
+ \\||\\ ||   || ||   || ||   || ||||||| ||||//    \|/
+     || ||   || ||   || ||   || ||   || || \\     ||
+ \||//  \\||//  ||   || ||   || ||   || ||  \\    ||
+*/
+  .cart-summary {
+    margin-top: 40px;
+    text-align: right;
+    font-size: 18px;
+  }
+
+  .cart-summary button {
+    margin-top: 15px;
+  }
+
+  .checkout-button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    padding-left: 12px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.366);
+    cursor: pointer;
+  }
+
+/*
+   /|||\  ||   ||  //||\\ ||\  || |||||| |||||| |||||| \\   //
+  ||  ||  ||   || ||   || ||\\ ||   ||     ||     ||    \\ //
+  ||  ||  ||   || ||||||| || \\||   ||     ||     ||     \|/
+  ||  ||  ||   || ||   || ||  \||   ||     ||     ||     ||
+  \|||\\   \\|//  ||   || ||   \|   ||   ||||||   ||     ||
+*/
+  .item-quantity {
+    padding: 15px;
+  }
+
+  .quantity-controls {
+    padding-left: 10%;
+  }
+
+  .quantity-modifier {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    padding-left: 12px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.366);
+    cursor: pointer;
+  }
+
+  .quantity-modifier:hover, .checkout-button:hover {
+    background-color: #f3efdd;
+  }
+
+  .remove-button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    margin-left: 50px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    padding-left: 12px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.366);
+    cursor: pointer;
+  }
+
+  .remove-button img {
+    width: 20px;
+    height: 20px;
+  }
+
+/* Stile per le notifiche toast */
+.toast-notification {
+  position: fixed;
+  bottom: 20px; /* Cambiato da top a bottom */
+  left: 50%;
+  transform: translateX(-50%) translateY(20px); /* Invertito il valore Y per animare dal basso */
+  background-color: #fefbec;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Migra", sans-serif;
+  font-weight: 1000;
+  font-size: 14px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.366);
+}
+
+.toast-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Animazioni per la rimozione degli elementi dal carrello */
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+
+.cart-item {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.cart-item.removing {
+  animation: fadeOutRight 0.5s forwards;
+}
+
+/* Stile per il messaggio di carrello vuoto */
+.empty-cart {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 20px 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.empty-cart h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.empty-cart-link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Migra", sans-serif;
+  font-weight: 1000;
+  font-size: 15px;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.366);
+  transition: background-color 0.3s ease;
+}
+
+.empty-cart-link:hover {
+  background-color: #f3efdd;
+}
+
+/*
+ ||||  |||  ||   || ||||||  |||   |||| ||||||
+||    || || |||| ||   ||   || || ||      ||
+||    || || || ||||   ||   ||||| ||      ||
+||    || || ||   ||   ||   || || ||      ||
+ ||||  |||  ||   ||   ||   || ||  ||||   ||
+*/
+
+.contactus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* opzionale, per dare spazio tra email e instagram */
+  flex-wrap: wrap;
+  margin-top: 100px;
+  width: 100%;
+}
+
+/*.contactus-container {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 100px;
+  width: auto;
+  height: auto;
+}*/
+
+#email {
+  font-size: 12px;
+  font-family: "Migra";
+  font-weight: 1000;
+  text-align: center;
+  width: 150px;
+  margin-left: 10px;
+  color: black;
+  background-color: transparent;
+  border: none;
+}
+#email:hover {
+  cursor: pointer;
+  color: #a8a69b;
+}
+
+#instagram {
+  font-size: 12px;
+  font-family: "Migra";
+  font-weight: 1000;
+  text-align: center;
+  width: 100px;
+  margin-left: 10px;
+  color: black;
+  background-color: transparent;
+  border: none;
+}
+#instagram:hover {
+  cursor: pointer;
+  color: #a8a69b;
+}

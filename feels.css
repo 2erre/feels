@@ -14,14 +14,34 @@ a {
 }
 
 .header {
+  position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
   display: block; 
   margin: 0 auto;
-  width: 7%;
+  width: 25%;
 }
+
+.cart-link {
+  position: absolute;
+  right: 22%;
+  top: 50%;
+  transform: translateY(-80%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-link img {
+  width: 24px;
+  height: 24px;
+}
+
 
 /*
 ||||  ||||   |||  ||||  || ||  |||| ||||||
@@ -80,11 +100,18 @@ a {
 */
 
 .aboutus-container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/*.aboutus-container {
   position: relative;
   margin-top: 100px;
   margin-bottom: 18px;
   height: auto;
-}
+  max-width: 1200px;
+}*/
 
 .aboutus-txt {
   text-align: center;
@@ -111,14 +138,30 @@ a {
 */
 
 .contactus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* opzionale, per dare spazio tra email e instagram */
+  flex-wrap: wrap;
   margin-top: 100px;
-  height: auto;
+  width: 100%;
 }
 
+/*.contactus-container {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 100px;
+  width: auto;
+  height: auto;
+}*/
+
 #email {
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Migra";
   font-weight: 1000;
+  text-align: center;
   width: 150px;
   margin-left: 10px;
   color: black;
@@ -131,29 +174,55 @@ a {
 }
 
 #instagram {
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Migra";
   font-weight: 1000;
+  text-align: center;
   width: 100px;
   margin-left: 10px;
-  margin-bottom: 1px;
   color: black;
   background-color: transparent;
   border: none;
-  text-decoration: none;
-  text-align: start;
 }
 #instagram:hover {
   cursor: pointer;
   color: #a8a69b;
 }
 
+/* Stile per le notifiche toast */
+.toast-notification {
+  position: fixed;
+  bottom: 20px; /* Cambiato da top a bottom */
+  left: 50%;
+  transform: translateX(-50%) translateY(20px); /* Invertito il valore Y per animare dal basso */
+  background-color: #fefbec;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Migra", sans-serif;
+  font-weight: 1000;
+  font-size: 14px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.366);
+}
+
+.toast-icon {
+  width: 16px;
+  height: 16px;
+}
+
 /*
-||||||  |||||         || || || ||||
-||  ||  ||            || || || ||
-|||||   ||||          || || || ||||
-||  ||  ||            || || || ||
-||   || |||| || || || ||  \|/  ||||
+||||||  ||||| /|||\ ||||\  /||||\ ||\   ||  /|||\ || ||   || |||||
+||  ||  ||   ||     ||  || ||  || ||\\  || ||     || ||   || ||
+|||||   |||| |||||\ ||||/  ||  || || \\ || |||||\ || ||   || ||||
+||  ||  ||       || ||     ||  || ||  \\||     || || \\  //  ||
+||   || |||| \||||/ ||     \|||/  ||   \|| \||||/ ||  \||/   |||||
 */
 
 @media only screen and (max-width: 768px) {

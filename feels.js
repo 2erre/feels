@@ -5,6 +5,8 @@ function copyText(text) {
     elem.select();
     document.execCommand('copy');
     document.body.removeChild(elem);
+
+    showToast("Email copyed to your clipboard");
 }
 
 //prodotti
@@ -50,3 +52,46 @@ function isInViewport(element) {
   
   // Add event listener to start the video when it's in the viewport
   window.addEventListener('scroll', startVideoIfInView);
+
+// Funzione per creare e mostrare un messaggio toast
+function showToast(message) {
+  // Rimuovi toast esistenti
+  const existingToast = document.getElementById('remove-toast');
+  if (existingToast) {
+      existingToast.remove();
+  }
+  
+  // Crea un nuovo elemento toast
+  const toast = document.createElement('div');
+  toast.id = 'remove-toast';
+  toast.className = 'toast-notification';
+  
+  // Aggiunta dell'icona del cestino
+  toast.innerHTML = `
+      <img src="mediaFeels/copy-icon.png" class="toast-icon">
+      <span>${message}</span>
+  `;
+  
+  // Aggiungi il toast al documento
+  document.body.appendChild(toast);
+  
+  // Animazione di entrata (dal basso)
+  setTimeout(() => {
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';  // Aggiornato per mantenere il centramento X
+  }, 10);
+  
+  // Rimuovi il toast dopo 3 secondi
+  setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(20px)'; // Animazione di uscita verso il basso
+      
+      // Rimuovi l'elemento DOM dopo la fine dell'animazione
+      setTimeout(() => {
+          toast.remove();
+      }, 500);
+  }, 3000);
+}
+
+// Initialize total on load
+window.onload = updateTotal;

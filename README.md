@@ -30,3 +30,8 @@ Da fare:
 11/05/2024
 Progresso:
  - Cambiato il video da "summer feels different" a "feels logo animated"
+
+15/04/2025
+Progresso:
+- Creata la pagina mycart.html con i file css e js che ne conseguono
+- Aggiunto su ogni pagina il bottone del carrello che rimanda a mycart.html
