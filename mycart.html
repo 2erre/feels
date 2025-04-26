@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="mediaFeels/feels-logo-multi-single.png">
+    <link rel="stylesheet" type="text/css" media="screen" href="feels.css" />
+    <script src="feels.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="mycart.css" />
+    <script src="mycart.js"></script>
+    <title>My cart</title>
+</head>
+<body class="body">
+    <div id="page-loader">
+      <video id="loader-video" src="mediaFeels/feels-logo-loader-video.mp4" autoplay muted></video>
+    </div>
+
+    <div class="header">
+      <a href="javascript:void(0)" onclick="goToPageWithLoader('index.html')">
+        <img class="logo" src="mediaFeels/feels-logo-mono-plural.png" />
+      </a>
+      <!-- <p id="currentWidth" style="color: black; position: absolute"></p>  -->
+
+      <a class="cart-link" href="javascript:void(0)" onclick="goToPageWithLoader('mycart.html')" title="Go to cart">
+        <img src="mediaFeels/cart-icon.png" alt="cart" />
+      </a>
+
+      <a class="account-link" href="javascript:void(0)" onclick="goToPageWithLoader('myaccount.html')" title="Account">
+        <img src="mediaFeels/account-icon.png" alt="account" />
+      </a>
+    </div>
+    
+  <div class="cart-container">
+    <h1 class="cart-title">Your Cart</h1>
+
+    <!-- Example cart items -->
+    <div class="cart-item" data-price="39.99">
+      <div class="item-details">
+        <img src="mediaFeels/white-tshirt.png" alt="White T-shirt">
+        <div class="item-name">
+          White T-shirt
+          <div class="size-dropdown">
+            <button class="size-button" onclick="toggleSizeDropdown(this)">M <img src="mediaFeels/arrow-down.svg"></button>
+            <div class="size-options">
+              <div onclick="chooseSize(this, 'S')">S</div>
+              <div onclick="chooseSize(this, 'M')">M</div>
+              <div onclick="chooseSize(this, 'L')">L</div>
+              <div onclick="chooseSize(this, 'XL')">XL</div>
+              <div onclick="chooseSize(this, 'XXL')">XXL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quantity-controls">
+        <button class="quantity-modifier" onclick="updateQuantity(this, -1)">-</button>
+        <span class="item-quantity">1</span>
+        <button class="quantity-modifier" onclick="updateQuantity(this, 1)">+</button>
+        <button class="remove-button" onclick="removeItem(this)"><img src="mediaFeels/trash-icon.svg"></button>
+      </div>
+      <div class="item-price">39.99€</div>
+    </div>
+
+    <div class="cart-item" data-price="39.99">
+      <div class="item-details">
+        <img src="mediaFeels/black-tshirt.png" alt="Black T-shirt">
+        <div class="item-name">
+          Black T-shirt
+          <div class="size-dropdown">
+            <button class="size-button" onclick="toggleSizeDropdown(this)">M <img src="mediaFeels/arrow-down.svg" alt=""></button>
+            <div class="size-options">
+              <div onclick="chooseSize(this, 'S')">S</div>
+              <div onclick="chooseSize(this, 'M')">M</div>
+              <div onclick="chooseSize(this, 'L')">L</div>
+              <div onclick="chooseSize(this, 'XL')">XL</div>
+              <div onclick="chooseSize(this, 'XXL')">XXL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quantity-controls">
+        <button class="quantity-modifier" onclick="updateQuantity(this, -1)">-</button>
+        <span class="item-quantity">1</span>
+        <button class="quantity-modifier" onclick="updateQuantity(this, 1)">+</button>
+        <button class="remove-button" onclick="removeItem(this)"><img src="mediaFeels/trash-icon.svg" alt="Remove"></button>
+      </div>
+      <div class="item-price">39.99€</div>
+    </div>
+
+    <!-- Cart summary -->
+    <div class="cart-summary">
+      Total: <strong id="cart-total"></strong>
+      <br>
+      <button class="checkout-button">Proceed to Checkout</button>
+    </div>
+
+    <footer class="contactus-container">
+      <p id="email" text="ouremail@gmail.com" title="copy e-mail" onclick="copyText('ouremail@gmail.com')">
+      Our e-mail: ouremail@gmail.com
+      </p>
+      <p id="instagram" onclick="redirect(id)" title="to our profile">
+        Our Instagram: @feelsclo
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

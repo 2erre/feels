@@ -7,52 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" media="screen" href="feels.css" />
     <script src="feels.js"></script>
-    <link rel="icon" type="image/x-icon" href="mediaFeels/feelsLogoColored.jpg">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script src="index.js"></script>
+    <link rel="icon" type="image/x-icon" href="mediaFeels/feels-logo-multi-single.png">
   </head>
 
   <body class="body">
-    <a class="header" href="index.html">
-      <img class="logo" src="mediaFeels/logoFeels.png" />
-      <p id="currentWidth" style="color: black; position: absolute"></p>
-    </a>
+    <div id="page-loader">
+      <video id="loader-video" src="mediaFeels/feels-logo-loader-video.mp4" autoplay muted></video>
+    </div>
+
+    <div class="header">
+      <a href="javascript:void(0)" onclick="goToPageWithLoader('index.html')">
+        <img class="logo" src="mediaFeels/feels-logo-mono-plural.png" />
+      </a>
+      <!-- <p id="currentWidth" style="color: black; position: absolute"></p>  -->
+
+      <a class="cart-link" href="javascript:void(0)" onclick="goToPageWithLoader('mycart.html')" title="Go to cart">
+        <img src="mediaFeels/cart-icon.png" alt="cart" />
+      </a>
+
+      <a class="account-link" href="javascript:void(0)" onclick="goToPageWithLoader('myaccount.html')" title="Account">
+        <img src="mediaFeels/account-icon.png" alt="account" />
+      </a>
+    </div>
 
     <div class="products-container">
-      <div class="product-card" id="shirt" onclick="redirect(id)" onmousedown="handleMouseDown(event)">
+      <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
         <img src="mediaFeels/white-tshirt.png" alt=""/>
         <h5 style="text-align: center">
           White t-shirt
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" id="shirt" onclick="redirect(id)" onmousedown="handleMouseDown(event)">
+      <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
         <img src="mediaFeels/black-tshirt.png" alt="" />
         <h5 style="text-align: center">
           Black t-shirt
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" id="shirt" onclick="redirect(id)" onmousedown="handleMouseDown(event)">
+      <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
         <img src="mediaFeels/blue-tshirt.jpg" alt="" />
         <h5 style="text-align: center">
           Blue t-shirt
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" id="shirt" onclick="redirect(id)" onmousedown="handleMouseDown(event)">
+      <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
         <img src="mediaFeels/red-tshirt.png" alt="" />
         <h5 style="text-align: center">
           Red t-shirt
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" id="shirt" onclick="redirect(id)" onmousedown="handleMouseDown(event)">
+      <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
         <img src="mediaFeels/yellow-tshirt.png" alt="" />
         <h5 style="text-align: center">
           Yellow t-shirts
           <p style="text-align: center" class="price">39.99€</p>
         </h5>
       </div>
-      <div class="product-card" id="shirt" onclick="redirect(id)" onmousedown="handleMouseDown(event)">
+      <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
         <img src="mediaFeels/green-tshirt.png" alt="" />
         <h5 style="text-align: center">
           Green t-shirts
@@ -67,23 +83,21 @@
           "A wave of emotions that sometimes cannot be adequately explained."
         </p>
         <div class="video-container">
-          <video class="video" src="mediaFeels/feels-logo-video.mp4" autoplay muted loop></video>
+          <!-- <video class="video" src="mediaFeels/feels-logo-animated-v1.mp4" autoplay muted loop></video> -->
+          <video class="video" src="mediaFeels/feels-logo-animated-v2.mp4" autoplay muted loop></video>
         </div>
       </div>
     </div>
 
-    <div class="contactus-container">
-      <p
-        id="email"
-        text="ouremail@gmail.com"
-        title="copy e-mail"
-        onclick="copyText('ouremail@gmail.com')"
-      >
-        Our e-mail: ouremail@gmail.com
+    <!-- <div class="contactus-container"> -->
+    <footer class="contactus-container">
+      <p id="email" text="ouremail@gmail.com" title="copy e-mail" onclick="copyText('ouremail@gmail.com')">
+      Our e-mail: ouremail@gmail.com
       </p>
       <p id="instagram" onclick="redirect(id)" title="to our profile">
         Our Instagram: @feelsclo
       </p>
-    </div>
+    </footer>
+    <!-- </div> -->
   </body>
 </html>

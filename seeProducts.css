@@ -1,28 +1,3 @@
-@font-face {
-  font-family: "Migra";
-  src: url(fontSito/Migra-Extralight.ttf) format("truetype");
-}
-
-a {
-  color: inherit;
-}
-
-.body {
-  background-color: #fefbec;
-  font-family: "Migra", sans-serif;
-  font-weight: 1000;
-}
-  
-.header {
-  width: 100%;
-}
-  
-.logo {
-  display: block; 
-  margin: 0 auto;
-  width: 7%;
-}
-
 /*
 ||||  ||||   |||  ||||  || ||  |||| ||||||
 || || || || || || || || || || ||      ||   
@@ -195,4 +170,135 @@ a {
 .about #cart-button:hover {
   cursor: pointer;
   background-color: #f3efdd;
+}
+
+/*
+||||  ||||   |||  ||||  || ||  |||| ||||||
+|| || || || || || || || || || ||      ||   
+||||  ||||  || || || || || || ||      ||   
+||    || || || || || || || || ||      ||    
+||    || ||  |||  ||||   |||   ||||   ||      
+*/
+
+.other-products {
+  margin-top: 120px;
+}
+
+.title {
+  font-size: 18px;
+  margin-left: 100px;
+}
+
+.noselect {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+
+.carousel-fade-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+.reset-arrow {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fefbec;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.reset-arrow:hover {
+  background: #f3efdd;
+}
+
+.products-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 40px;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.products-container::-webkit-scrollbar {
+  display: none;
+}
+
+.products-container:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.product-card {
+  flex: 0 0 auto;
+}
+
+.fade-left, .fade-right {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, #fefbec 0%, transparent 100%);
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, #fefbec 0%, transparent 100%);
+}
+
+.product-card {
+  flex: 0 0 auto; /* don't shrink or grow, just stay fixed width */
+  width: 250px; /* fixed width to keep consistency */
+  margin: 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+.product-card img {
+  margin: 0;
+  width: 250px;
+  height: 250px;
+  /* Images cannot be dragged */
+  -webkit-user-drag: none;
+  pointer-events: none; /* stops accidental interaction */
+}
+.product-card h5 {
+  margin: 0;
+  font-size: 16px;
+  width: 250px;
+}
+.product-card p {
+  font-size: 13px;
+}
+
+.product-card:hover {
+  transform: scale(0.9);
+  cursor: pointer;
 }
