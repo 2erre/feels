@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
 function chooseSize(element, size) {
   const button = element.parentElement.previousElementSibling;
-  button.innerHTML = `${size} <img src="mediaFeels/arrow-down.svg">`;
+  button.innerHTML = `${size} <img src="docs/mediaFeels/arrow-down.svg">`;
   element.parentElement.style.display = 'none';
 }
  

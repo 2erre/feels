@@ -70,7 +70,7 @@ function showToast(message) {
 
     // Aggiunta dell'icona del cestino
     toast.innerHTML = `
-        <img src="mediaFeels/copy-icon.png" class="toast-icon">
+        <img src="docs/mediaFeels/copy-icon.png" class="toast-icon">
         <span>${message}</span>
     `;
 
