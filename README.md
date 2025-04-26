@@ -30,8 +30,43 @@ Da fare:
 11/05/2024
 Progresso:
  - Cambiato il video da "summer feels different" a "feels logo animated"
+ Da fare:
+ - Non è chiaro cosa succede quando si schiaccia su "Our-email" (deve essere specificato che viene copiata negli appunti dell'utente l'email)
+ - Nella pagine per il dettaglio dei prodotti fare in basso uno slider dove vengono proposti altri prodotti
 
 15/04/2025
 Progresso:
 - Creata la pagina mycart.html con i file css e js che ne conseguono
 - Aggiunto su ogni pagina il bottone del carrello che rimanda a mycart.html
+Da fare:
+ - Aggiungere un tasto per l'account sul sito
+ - Nella pagine per il dettaglio dei prodotti fare in basso uno slider dove vengono proposti altri prodotti
+ - in mycart.html il tasto del checkout non fa nulla
+ - rendere il carrello dinamico
+ - il tasto "add to cart" non fa nulla nella pagina seeProducts.html
+ - aggiungere un tasto veloce per aggiungere al carrello nella pagina index.html
+
+ 21/04/2025
+ Progresso:
+ - Aggiunto il carosello di prodotti consigliati nella pagina seeProducts.html
+ Da fare:
+ - Sistemare il carosello e la "smoothness" dello scorrimento col mouse
+ - Aggiungere un tasto per l'account sul sito
+ - in mycart.html il tasto del checkout non fa nulla
+ - rendere il carrello dinamico
+ - il tasto "add to cart" non fa nulla nella pagina seeProducts.html
+ - aggiungere un tasto veloce per aggiungere al carrello nella pagina index.html
+
+ 26/04/2025
+ Progresso: 
+  - Aggiunto il tasto per l'account sul sito con annessi file (myaccount: html, css e js)
+  - Sisteamato il logo in tutte le sue forme
+  - Aggiunto il nuovo video per la sezione "about us"
+  - Aggiunto il loader tra pagine quando si clicca un collegamento
+  - Ordinati i file css e js rendendo uniti in degli unici file le funzioni ed i css condivisi
+Da fare:
+  - Sistemare il carosello e la "smoothness" dello scorrimento col mouse
+  - in mycart.html il tasto del checkout non fa nulla
+  - rendere il carrello dinamico
+  - il tasto "add to cart" non fa nulla nella pagina seeProducts.html
+  - aggiungere un tasto veloce per aggiungere al carrello nella pagina index.html

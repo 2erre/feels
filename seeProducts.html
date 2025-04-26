@@ -5,19 +5,29 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>See products</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/x-icon" href="mediaFeels/feels-logo-multi-single.png">
+    <link rel="stylesheet" type="text/css" media="screen" href="feels.css" />
+    <script src="feels.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='seeProducts.css'>
     <script src='seeProducts.js'></script>
-    <link rel="icon" type="image/x-icon" href="mediaFeels/feelsLogoColored.jpg">
 </head>
 <body class="body">
+    <div id="page-loader">
+        <video id="loader-video" src="mediaFeels/feels-logo-loader-video.mp4" autoplay muted></video>
+    </div>
+
     <div class="header">
-        <a href="index.html">
-          <img class="logo" src="mediaFeels/logoFeels.png" />
+        <a href="javascript:void(0)" onclick="goToPageWithLoader('index.html')">
+            <img class="logo" src="mediaFeels/feels-logo-mono-plural.png" />
         </a>
         <!-- <p id="currentWidth" style="color: black; position: absolute"></p>  -->
-  
-        <a class="cart-link" href="mycart.html" title="Go to cart">
-          <img src="mediaFeels/cart-icon.png" alt="cart" />
+    
+        <a class="cart-link" href="javascript:void(0)" onclick="goToPageWithLoader('mycart.html')" title="Go to cart">
+            <img src="mediaFeels/cart-icon.png" alt="cart" />
+        </a>
+    
+        <a class="account-link" href="javascript:void(0)" onclick="goToPageWithLoader('myaccount.html')" title="Account">
+            <img src="mediaFeels/account-icon.png" alt="account" />
         </a>
     </div>
 
@@ -52,9 +62,100 @@
     </div>
 
     <div class="other-products">
-        <!--
-            mostra altri prodotti correlati
-        -->
+        <h1 class="title">You might also like</h1>
+        <div class="carousel-fade-wrapper noselect">
+            <div class="products-container" id="carousel">
+                <div class="carousel-track">
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/white-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        White t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/black-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        Black t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/blue-tshirt.jpg" alt=""/>
+                        <h5 style="text-align: center">
+                        Blue t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/red-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        Red t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/yellow-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        Yellow t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/green-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        Green t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/white-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        White t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/black-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        Black t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/blue-tshirt.jpg" alt=""/>
+                        <h5 style="text-align: center">
+                        Blue t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/red-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        Red t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/yellow-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        Yellow t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                    <div class="product-card" id="shirt" onclick="redirectWithLoader(id)" onmousedown="handleMouseDown(event)">
+                        <img src="mediaFeels/green-tshirt.png" alt=""/>
+                        <h5 style="text-align: center">
+                        Green t-shirt
+                        <p style="text-align: center" class="price">39.99€</p>
+                        </h5>
+                    </div>
+                </div>
+                <div class="reset-arrow" id="resetCarousel">&#x2936;</div>
+            </div>
+            <div class="fade-left"></div>
+            <div class="fade-right"></div>
+        </div>
     </div>
 
     <footer class="contactus-container">
