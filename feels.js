@@ -44,7 +44,7 @@ function redirectWithLoader(id) {
     video.currentTime = 0;
     video.play();
 
-    video.onended = function() {
+    video.onended = function () {
         redirect(id);
 
         // Dopo che ha aperto la nuova pagina:
@@ -56,7 +56,7 @@ function redirectWithLoader(id) {
 }
 
 // Funzione per creare e mostrare un messaggio toast
-function showToast(message) {
+/* function showToast(message) {
     // Rimuovi toast esistenti
     const existingToast = document.getElementById('remove-toast');
     if (existingToast) {
@@ -89,6 +89,57 @@ function showToast(message) {
         toast.style.transform = 'translateX(-50%) translateY(20px)'; // Animazione di uscita verso il basso
 
         // Rimuovi l'elemento DOM dopo la fine dell'animazione
+        setTimeout(() => {
+            toast.remove();
+        }, 500);
+    }, 3000);
+} */
+
+// Enhanced toast function that handles different action types
+function showToast(message, actionType = 'copy') {
+    // Remove existing toast
+    const existingToast = document.getElementById('remove-toast');
+    if (existingToast) {
+        existingToast.remove();
+    }
+
+    // Determine which icon to use based on action type
+    let iconSrc = 'mediaFeels/copy-icon.png'; // Default
+
+    if (actionType === 'cart') {
+        iconSrc = 'mediaFeels/cart-icon.png';
+    } else if (actionType === 'remove') {
+        iconSrc = 'mediaFeels/trash-icon.png';
+    } else if (actionType === 'copy') {
+        iconSrc = 'mediaFeels/copy-icon.png';
+    }
+
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.id = 'remove-toast';
+    toast.className = 'toast-notification';
+
+    // Add proper icon based on action type
+    toast.innerHTML = `
+        <img src="${iconSrc}" class="toast-icon">
+        <span>${message}</span>
+    `;
+
+    // Add to document
+    document.body.appendChild(toast);
+
+    // Animation: enter from bottom
+    setTimeout(() => {
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateX(-50%) translateY(0)';  // Maintain X center
+    }, 10);
+
+    // Remove after 3 seconds
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(20px)'; // Exit animation
+
+        // Remove DOM element after animation
         setTimeout(() => {
             toast.remove();
         }, 500);

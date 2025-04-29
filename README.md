@@ -70,3 +70,13 @@ Da fare:
   - rendere il carrello dinamico
   - il tasto "add to cart" non fa nulla nella pagina seeProducts.html
   - aggiungere un tasto veloce per aggiungere al carrello nella pagina index.html
+
+ 29/04/2025
+ Progresso:
+ - Aggiunto il tasto add-to-cart nelle product card nella pagina index.html
+ - Sistemata la funzione showToast nel file feels.js per renderla "dinamica"
+ Da fare:
+  - Sistemare il carosello e la "smoothness" dello scorrimento col mouse
+  - in mycart.html il tasto del checkout non fa nulla
+  - rendere il carrello dinamico
+  - il tasto "add to cart" non fa nulla nella pagina seeProducts.html
